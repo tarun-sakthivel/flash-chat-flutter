@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1064083970451",
+    "firebase_url": "https://flash-chatter-75210-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "flash-chatter-75210",
+    "storage_bucket": "flash-chatter-75210.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064083970451:android:a6822b1054962f44c53066",
+        "android_client_info": {
+          "package_name": "com.taru.flash_chatter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwxvV1n-irySubOpUDGpIvxmNLQFeSBP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
