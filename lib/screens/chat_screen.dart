@@ -1,6 +1,5 @@
 // ignore_for_file: unused_local_variable
 
-
 import 'package:flutter/material.dart';
 import 'package:flash_chatter/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -51,7 +50,8 @@ class _ChatScreenState extends State<ChatScreen> {
   void messagesStream() async {
     await for (var snapshot in _firestore.collection('messages').snapshots()) {
       for (var message in snapshot.docs) {
-        print(message.data);
+        var text = message;
+        print(text);
       }
     }
   }
@@ -98,6 +98,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         'text': messageText,
                         'sender': loggedInUser?.email,
                       });
+                      messagesStream();
                     },
                     child: const Text(
                       'Send',
