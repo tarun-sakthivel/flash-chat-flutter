@@ -15,7 +15,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-   late User loggedInUser;
+  late User loggedInUser;
   bool showSpinner = false;
   final _auth = FirebaseAuth
       .instance; //we are creating this variable to intialize and use it in the folowing places.
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 RoundedButton(
                     title: 'Login',
-                    color: Colors.grey,
+                    color: const Color.fromARGB(255, 0, 0, 0),
                     onPressed1: () async {
                       setState(() {
                         showSpinner = true;
@@ -76,9 +76,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       try {
                         final User = _auth.signInWithEmailAndPassword(
                             email: email, password: password);
-                        Navigator.pushReplacementNamed(
-                            context, ChatScreen.id);
-                                              setState(() {
+                        Navigator.pushReplacementNamed(context, ChatScreen.id);
+                        setState(() {
                           showSpinner = false;
                         });
                       } catch (e) {
