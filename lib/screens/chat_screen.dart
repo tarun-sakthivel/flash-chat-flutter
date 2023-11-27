@@ -63,7 +63,7 @@ class _ChatScreenState extends State<ChatScreen> {
         leading: null,
         actions: <Widget>[
           IconButton(
-              icon: const Icon(Icons.close),
+              icon: const Icon(Icons.logout),
               onPressed: () {
                 messagesStream();
                 //_auth.signOut();
@@ -102,6 +102,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     },
                     child: const Text(
                       'Send',
+                      selectionColor: Colors.transparent,
                       style: kSendButtonTextStyle,
                     ),
                   ),
