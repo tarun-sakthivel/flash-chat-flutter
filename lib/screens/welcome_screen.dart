@@ -48,49 +48,52 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                Image.asset(
-                  'images/logo.png',
-                  height: 40.0,
-                ),
-                TyperAnimatedTextKit(
-                  text: const ['Fire dip'],
-                  textStyle: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white,
-                    wordSpacing: controller1.value,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Image.asset(
+                    'images/logo.png',
+                    height: 40.0,
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              //this is introduced to create a space between the two box or text
-              height: 48.0,
-            ),
-            RoundedButton(
-              title: 'Login',
-              color: Colors.blueGrey,
-              onPressed1: () {
-                Navigator.pushNamed(context, LoginScreen.id);
-              },
-            ),
-            RoundedButton(
+                  TyperAnimatedTextKit(
+                    text: const ['Fire dip'],
+                    textStyle: TextStyle(
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                      wordSpacing: controller1.value,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                //this is introduced to create a space between the two box or text
+                height: 48.0,
+              ),
+              RoundedButton(
+                title: 'Login',
                 color: Colors.blueGrey,
-                title: 'Register',
                 onPressed1: () {
-                  Navigator.pushNamed(context, RegistrationScreen.id);
-                })
-          ],
+                  Navigator.pushNamed(context, LoginScreen.id);
+                },
+              ),
+              RoundedButton(
+                  color: Colors.blueGrey,
+                  title: 'Register',
+                  onPressed1: () {
+                    Navigator.pushNamed(context, RegistrationScreen.id);
+                  })
+            ],
+          ),
         ),
       ),
     );
